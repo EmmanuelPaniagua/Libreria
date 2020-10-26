@@ -1,4 +1,4 @@
-from PySide2.QtWidgets import QMainWindow, QFileDialog
+from PySide2.QtWidgets import QMainWindow, QFileDialog, QMessageBox
 from PySide2.QtCore import Slot
 from ui_mainwindow import Ui_MainWindow
 from libreria_20B.libreria import Libreria
@@ -33,7 +33,18 @@ class MainWindow(QMainWindow):
             'JSON (*.json)'
         ) [0]
         print(ubicacion)
-        self.libreria.guardar(ubicacion)
+        if self.libreria.guardar(ubicacion):
+            QMessageBox.information(
+                self,
+                "Éxito",
+                "Se pudo crear el archivo" + ubicacion
+            )
+        else:
+            QMessageBox.critical(
+                self,
+                "Error",
+                "No se pudo crear el archivo" + ubicacion
+            )
 
     @Slot()
     def click_mostrar(self):
