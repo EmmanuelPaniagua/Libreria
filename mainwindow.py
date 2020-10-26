@@ -31,8 +31,10 @@ class MainWindow(QMainWindow):
             'Guardar Archivo',
             '.',
             'JSON (*.json)'
-        )
+        ) [0]
         print(ubicacion)
+        self.libreria.guardar(ubicacion)
+
     @Slot()
     def click_mostrar(self):
         #self.libreria.mostrar()
