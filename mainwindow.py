@@ -1,4 +1,4 @@
-from PySide2.QtWidgets import QMainWindow
+from PySide2.QtWidgets import QMainWindow, QFileDialog
 from PySide2.QtCore import Slot
 from ui_mainwindow import Ui_MainWindow
 from libreria_20B.libreria import Libreria
@@ -25,8 +25,14 @@ class MainWindow(QMainWindow):
 
     @Slot()
     def action_guardar_archivo(self):
-        print('guardar_archivo')
-
+        #print('guardar_archivo')
+        ubicacion = QFileDialog.getSaveFileName(
+            self,
+            'Guardar Archivo',
+            '.',
+            'JSON (*.json)'
+        )
+        print(ubicacion)
     @Slot()
     def click_mostrar(self):
         #self.libreria.mostrar()
