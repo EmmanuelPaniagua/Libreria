@@ -14,6 +14,13 @@ class Libro:
             'Publicado: ' + str(self.__publicado) + '\n' +
             'Editorial: ' + self.__editorial + '\n'
         )
+    def to_dict(self):
+        return {
+             "titulo": self.__titulo,
+             "autor": self.__autor,
+             "publicado": self.__publicado,
+             "editorial": self.__editorial   
+        }
 
 # l01 = Libro(titulo="Programación", autor="Deitel", publicado=2020, editorial="Pearson")
 # print(l01)
