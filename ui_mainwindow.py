@@ -123,7 +123,7 @@ class Ui_MainWindow(object):
 #endif // QT_CONFIG(shortcut)
         self.actionGuardar.setText(QCoreApplication.translate("MainWindow", u"Guardar", None))
 #if QT_CONFIG(shortcut)
-        self.actionGuardar.setShortcut(QCoreApplication.translate("MainWindow", u"Ctrl+D", None))
+        self.actionGuardar.setShortcut(QCoreApplication.translate("MainWindow", u"Ctrl+S", None))
 #endif // QT_CONFIG(shortcut)
         self.groupBox.setTitle(QCoreApplication.translate("MainWindow", u"Libro", None))
         self.label_4.setText(QCoreApplication.translate("MainWindow", u"Editorial:", None))
