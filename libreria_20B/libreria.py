@@ -19,6 +19,11 @@ class Libreria:
             str(libro) + '\n' for libro in self.__libros
         )
 
+    def guardar(self, ubicacion):
+        with open(ubicacion, 'w') as archivo:
+            archivo.write(str(self))
+
+
 #l01 = Libro(titulo="Programación", autor="Deitel", publicado=2020, editorial="Pearson")
 #l02 = Libro("Python", "Guido", "2010", "Planeta")
 #libreria = Libreria()
