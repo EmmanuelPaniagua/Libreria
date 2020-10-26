@@ -30,7 +30,14 @@ class Libreria:
         except:
             return 0
 
-        
+    def abrir(self, ubicacion):
+        try:
+            with open(ubicacion, 'r') as archivo:
+                lista = json.load(archivo)
+                self.__libros = [Libro(**libro) for libro in lista]
+            return 1
+        except:
+            return 0
 
 
 #l01 = Libro(titulo="Programación", autor="Deitel", publicado=2020, editorial="Pearson")
