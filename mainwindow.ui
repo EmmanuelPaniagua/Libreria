@@ -129,7 +129,7 @@
     <string>Guardar</string>
    </property>
    <property name="shortcut">
-    <string>Ctrl+D</string>
+    <string>Ctrl+S</string>
    </property>
   </action>
  </widget>
